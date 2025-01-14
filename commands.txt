@@ -1,0 +1,6 @@
+npx create-vite@latest
+npm i
+npm i react-router
+npm install react-i18next i18next --save
+npm i @tanstack/react-query
+npm i axios
