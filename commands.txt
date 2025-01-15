@@ -4,3 +4,5 @@ npm i react-router
 npm install react-i18next i18next --save
 npm i @tanstack/react-query
 npm i axios
+npm install @headlessui/react
+npm install -D tailwindcss postcss autoprefixer

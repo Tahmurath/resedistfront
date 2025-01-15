@@ -1,10 +1,14 @@
 import { createBrowserRouter } from "react-router";
 import { Suspense, lazy } from "react";
+// import LightSidebarWithHeader from "./layout/LightSidebarWithHeader.jsx";
 
 // const Home = lazy(() => import("./pages/home/home.jsx"));
 // const About = lazy(() => import("./pages/home/about.jsx"));
 
 const MainLayout = lazy(() => import('./layout/MainLayout'));
+const Navlayout = lazy(() => import('./layout/Navlayout'));
+const LightSidebarWithHeader = lazy(() => import('./layout/LightSidebarWithHeader'));
+const DarkSidebarWithHeader = lazy(() => import('./layout/DarkSidebarWithHeader'));
 const AdminLayout = lazy(() => import('./layout/AdminLayout'));
 
 const Home = lazy(() => import('./pages/main/home.jsx'));
@@ -18,7 +22,7 @@ export const router = createBrowserRouter([
     path: '/',
     element: (
         <Suspense fallback={<>...</>}>
-          <MainLayout />
+          <Navlayout />
         </Suspense>
     ),
     children: [
@@ -52,7 +56,7 @@ export const router = createBrowserRouter([
     path: 'admin',
     element: (
         <Suspense fallback={<>...</>}>
-          <AdminLayout />
+          <LightSidebarWithHeader />
         </Suspense>
     ),
     children: [
